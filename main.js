@@ -21,18 +21,6 @@ const onWindowLoad = () => {
 }
 window.addEventListener("load", onWindowLoad);
 
-// Set the size on window resize
-const onWindowResize = () => {
-    if (window.innerWidth < playerWidth) {
-        playerSize();
-
-        restartPlayer();
-
-        playerInit();
-    }
-}
-window.addEventListener("resize", onWindowResize);
-
 // Get and set the width and height for the player and the player placeholder dynamically depending on the size of the screen
 const playerSize = () => {
     let width = playerWidth;
@@ -86,14 +74,15 @@ const playerInit = () => {
     setWidthHeight(playerPlaceholder, activeWidth, activeHeight);
 
     SLDP.init({
-        container:          `player-placeholder`,
-        stream_url:         urlInput.value,
-        initial_resolution: '240p',
-        buffering:          500,
-        autoplay:           true,
-        muted:              false,
-        width:              activeWidth,
-        height:             activeHeight,
-        // fullscreen:         true
+        container:              `player-placeholder`,
+        stream_url:             urlInput.value,
+        initial_resolution:     '240p',
+        buffering:              500,
+        autoplay:               true,
+        muted:                  false,
+        width:                  activeWidth,
+        height:                 activeHeight,
+        ios_failback_app_url:   "https://apps.apple.com/app/sldp-player/id1238237026",
+        fullscreen:             true
     })
 }

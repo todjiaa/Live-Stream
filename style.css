@@ -31,7 +31,7 @@ body {
 
 .url-input {
     width: 80%;
-    height: 40px;
+    padding: 10px;
     border: 2px solid #4CAF50;
     outline: none;
     font-size: 16px;
@@ -45,7 +45,7 @@ body {
 
 .start-stream-button {
     width: 20%;
-    height: 40px;
+    padding: 10px;
     border: 2px solid #4CAF50;
     background-color: white; 
     text-decoration: none;
